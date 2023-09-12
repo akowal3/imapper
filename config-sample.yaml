@@ -1,0 +1,27 @@
+imap:
+  url: imap.gmail.com
+  username: email@gmail.com
+  password: {application-password}
+  batchSize: 50
+  folder:
+    attachments: attachments
+    full-mails: full
+
+directories:
+  unprocessed: /tmp/unprocessed
+  success: /tmp/success
+  failed: /tmp/failed
+
+loop:
+  interval: 60 #seconds
+
+log:
+  level: info
+
+passwords:
+  - '123456'
+  - 'Password1'
+
+uptime:
+  monitor: true
+  endpoint: https://{uptime-kuma-address}/api/push/{auto-generated-id}
