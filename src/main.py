@@ -91,8 +91,8 @@ def fetch_attachments():
                 continue
             for att in msg.attachments:
                 save_attachment(att)
-
             mailbox.delete(msg.uid)
+        mailbox.expunge()
 
 # send status to uptime kuma
 def monitor(status: str):
